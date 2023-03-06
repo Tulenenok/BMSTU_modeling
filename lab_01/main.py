@@ -1,8 +1,20 @@
 import matplotlib.pyplot as plt
 from math import e
 
-plt.xlim([-5, 5])
-plt.ylim([-5, 5])
+plt.xlim([-10, 10])
+plt.ylim([-10, 10])
+
+
+def find_solution_for_equation(formula, x0):
+    """ Найти решение уравнения y = ..."""
+    f = formula[formula.find('=') + 1:].strip()
+    x = x0
+    h = 0.00001
+
+    df = (eval(f, {"x": x + h}) - eval(f, {"x": x})) / h
+    for i in range(1000):
+        x = x - eval(f, {"x": x}) / df
+    return x
 
 
 class Graph:
@@ -137,16 +149,103 @@ class Euler(ODY):
 
         return self.explicit_solution
 
+    def find_implicit_euler_decision(self, a, b, n):
+        # a, b -- начало и конец отрезка
+        # n -- количество узлов на сетке
+
+        def left():
+            x = self.x_point
+            y = self.y_point
+
+            while x >= a:
+                self.implicit_solution.append((x, y))
+                x = x - h
+
+                _f = self.derivative.replace('x', f'{x}')
+                _f = f'y + ({_f}) * {h} - {y}'
+                _f = _f.replace('y', 'x')
+
+                y = find_solution_for_equation(_f, y)
+                print(eval(_f, {"x": y}))
+                # x = x - h
+
+        def right():
+            x = self.x_point
+            y = self.y_point
+
+            while x <= b:
+                self.implicit_solution.append((x, y))
+                # x = x + h
+
+                _f = self.derivative.replace('x', f'{x}')
+                _f = f'y - ({_f}) * {h} - {y}'
+                _f = _f.replace('y', 'x')
+
+                # print(_f)
+
+                y = find_solution_for_equation(_f, y)
+                print(eval(_f, {"x": y}))
+                x = x + h
+
+        self.implicit_solution = []
+
+        h = (b - a) / n
+
+        if a <= self.x_point <= b:
+            left()
+            right()
+        elif a <= self.x_point and b <= self.x_point:
+            a, b = min(a, b), max(a, b)
+            left()
+            self.implicit_solution = [i for i in self.implicit_solution if i[0] <= b]
+        elif a >= self.x_point and b >= self.x_point:
+            a, b = min(a, b), max(a, b)
+            right()
+            self.implicit_solution = [i for i in self.implicit_solution if i[0] >= a]
+
+        return self.implicit_solution
+
+
+class Pikar(ODY):
+    def __init__(self, formula, dop_condition, decision=None):
+        super().__init__(formula, dop_condition, decision)
+
+        self.pikar_decision = []
+
+    # def find_pikar_decision(self,  a, b, n, approx):
+    #    self.pikar_decision = []
+    #
+    #    x = self.x_point
+    #    y = self.y_point
+    #
+    #    while x >= a:
+    #
+    #     x, y = self.x_start, self.y_start
+    #
+    #     for x in self.x_range():
+    #         result.append(y)
+    #         print(x)
+    #         y = self.f_approximation_number_s(x, approx)
+    #
+    #     return result
+
 
 ody_1 = Euler("y'(x) = 1 / (y * y + x)", "y(1) = 0", "x = 3 * e ** y - y ** 2 - 2 * y - 2")
 
 # points = ody_1.get_decision_points(-2, 1, 20)
 # explicit_euler_points = ody_1.find_explicit_euler_decision(-5, 5, 20)
 
-points = ody_1.get_decision_points(-5, 5, 50)
-explicit_euler_points = ody_1.find_explicit_euler_decision(-5, 5, 20)
+X = -5
+Y = 5
+STEPS = 20
+
+points = ody_1.get_decision_points(X, Y, 50)
+explicit_euler_points = ody_1.find_explicit_euler_decision(X, Y, STEPS)
+implicit_euler_points = ody_1.find_implicit_euler_decision(X, Y, STEPS)
 
 Graph.show_list(points, label='analytical')
-Graph.show_list(explicit_euler_points, 'm', label='explicit Euler', show_points=True)
+Graph.show_list(explicit_euler_points, 'm', label='explicit Euler', show_points=False)
+Graph.show_list(implicit_euler_points, 'g', label='implicit Euler', show_points=False)
+
 
 Graph.draw_all()
