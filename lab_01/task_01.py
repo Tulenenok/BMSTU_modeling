@@ -5,7 +5,7 @@ from prettytable import PrettyTable
 
 
 def derivative(x, u):
-    """ Производная функции (в данном случае dx/du = u^2 + x) """
+    """ Производная функции"""
     return 1 / (u ** 2 + x)
 
 
@@ -131,21 +131,23 @@ END = 3
 
 t = PrettyTable()
 
+""" Аналитическое """
 # analytical_points = solve_analytical(analytical_function, X, Y, -STEP, -END)
 analytical_points = solve_analytical(analytical_function, X, Y, STEP, END)
 draw_graph(analytical_points, color='m', label='analytical')
 
+""" Эйлер """
 # euler_points = solve_euler(derivative, X, Y, -STEP, -END)
 euler_points = solve_euler(derivative, X, Y, STEP, END)
+draw_graph(euler_points, label='explicit Euler')
 
+""" Собираю таблицу"""
 t.add_column("X", [i[0] for i in euler_points])
 t.add_column("Analytical", [i[1] for i in analytical_points[:len(euler_points)]])
 t.add_column("Euler", [i[1] for i in euler_points])
 
-draw_graph(euler_points, label='explicit Euler')
-
+""" Пикар """
 colors = ['#F9ED69', '#F08A5D', '#B83B5E', '#6A2C70']
-
 for i in range(1, 5):
     # picar_points = solve_picar(derivative, 1, 0, -0.1, -3, i)
     picar_points = solve_picar(derivative, X, Y, STEP, END, i)
@@ -153,7 +155,6 @@ for i in range(1, 5):
     draw_graph(picar_points, color=colors[i - 1], label=f'Picard {i}')
 
 print(t)
-
 plt.show()
 
 

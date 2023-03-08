@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from math import e
 from scipy.integrate import quad
 from prettytable import PrettyTable
 
@@ -91,8 +90,8 @@ def draw_graph(xy, color='b', label='', show_points=False, need_sort=True, show=
         plt.show()
 
 
-plt.xlim([0, 1.5])
-plt.ylim([0, 1.5])
+plt.xlim([0, 5])
+plt.ylim([0, 100])
 
 X = 0
 Y = 0
@@ -109,14 +108,16 @@ draw_graph(euler_points, label='explicit Euler')
 t.add_column("X", [i[0] for i in euler_points])
 t.add_column("Euler", [i[1] for i in euler_points])
 
+""" Пикар """
 colors = ['#F9ED69', '#F08A5D', '#B83B5E', '#6A2C70']
-for i in range(1, 5):
+for i in range(1, 4):
     # picar_points = solve_picar(derivative, 1, 0, -0.1, -3, i)
     picar_points = solve_picar(derivative, X, Y, STEP, END, i)
     t.add_column(f"Piсard {i}", [i[1] for i in picar_points])
     draw_graph(picar_points, color=colors[i - 1], label=f'Picard {i}')
 
 print(t)
+plt.grid()
 plt.show()
 
 
