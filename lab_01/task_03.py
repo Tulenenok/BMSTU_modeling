@@ -8,6 +8,31 @@ def derivative(x, u):
     return x ** 2 + u ** 2
 
 
+def find_solution_for_equation(func, x0):
+    """ Найти решение уравнения 0 = func"""
+    x = x0
+    h = 0.00001
+
+    df = (func(x + h) - func(x)) / h
+    for i in range(1000):
+        x = x - func(x) / df
+    return x
+
+
+def solve_euler_2(der, x0, y0, hx, x_end):
+    result = []
+    x, y = x0, y0
+
+    while hx > 0 and x <= x_end or hx < 0 and x >= x_end:
+        result.append((x, y))
+
+        tmp = lambda yi: yi - hx * der(x + hx, yi) - y
+        y = find_solution_for_equation(tmp, y)
+        x += hx
+
+    return result
+
+
 def solve_euler(der, x0, y0, hx, x_end):
     """
     Явный метод Эйлера
@@ -91,12 +116,12 @@ def draw_graph(xy, color='b', label='', show_points=False, need_sort=True, show=
 
 
 plt.xlim([0, 5])
-plt.ylim([0, 100])
+plt.ylim([0, 1])
 
 X = 0
 Y = 0
 STEP = 0.1
-END = 3
+END = 1.5
 
 t = PrettyTable()
 
@@ -104,6 +129,11 @@ t = PrettyTable()
 # euler_points = solve_euler(derivative, X, Y, -STEP, -END)
 euler_points = solve_euler(derivative, X, Y, STEP, END)
 draw_graph(euler_points, label='explicit Euler')
+
+
+""" Неявный Эйлер"""
+implicit_points = solve_euler_2(derivative, X, Y, STEP, END)
+draw_graph(implicit_points, color='g', label='implicit Euler')
 
 t.add_column("X", [i[0] for i in euler_points])
 t.add_column("Euler", [i[1] for i in euler_points])

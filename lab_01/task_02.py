@@ -14,6 +14,31 @@ def analytical_function(y):
     return e ** (y ** 2) - (y ** 2) / 2 - 0.5
 
 
+def find_solution_for_equation(func, x0):
+    """ Найти решение уравнения 0 = func"""
+    x = x0
+    h = 0.00001
+
+    df = (func(x + h) - func(x)) / h
+    for i in range(1000):
+        x = x - func(x) / df
+    return x
+
+
+def solve_euler_2(der, x0, y0, hy, y_end):
+    result = []
+    x, y = x0, y0
+
+    while hy > 0 and y <= y_end or hy < 0 and y >= y_end:
+        result.append((x, y))
+
+        tmp = lambda xi: xi - hy * der(xi, y + hy) - x
+        x = find_solution_for_equation(tmp, x)
+        y += hy
+
+    return result
+
+
 def solve_euler(der, x0, y0, hy, y_end):
     """
     Явный метод Эйлера
@@ -144,6 +169,10 @@ draw_graph(euler_points, label='explicit Euler')
 
 euler_points = solve_euler(derivative, X, Y, STEP, END)
 draw_graph(euler_points)
+
+""" Неявный Эйлер"""
+implicit_points = solve_euler_2(derivative, X, Y, STEP, END)
+draw_graph(implicit_points, color='g', label='implicit Euler')
 
 
 """ Заполняем таблицу """
