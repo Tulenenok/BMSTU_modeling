@@ -2,7 +2,7 @@
 
 ### Время выполнения алгоритмов
 
-<img src="img/time.png" width="450px">
+<img src="img/time.png" width="500px">
 
 ### Общий график 
 
