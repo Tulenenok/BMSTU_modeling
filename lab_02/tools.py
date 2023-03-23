@@ -124,3 +124,7 @@ def test_interpolation():
     draw_graph(I, T0_list, label='T0', show=True)
     draw_graph(I, m_list, color='m', label='m', show=True)
     draw_graph(T, sigma(T), color='y', label='sigma', show=True)
+
+
+def draw():
+    plt.show()

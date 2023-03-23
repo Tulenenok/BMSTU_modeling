@@ -7,7 +7,8 @@ from tools import (
     Interpolation,
     Integral,
     draw_xy_graph,
-    print_result_like_table
+    print_result_like_table,
+    draw
 )
 
 # Находим функции, используя интерполяцию на данные в тз таблицы
@@ -60,9 +61,19 @@ def wrap_one_calculate(r_obj, order_accuracy):
     draw_xy_graph(U, color='red', label=f'U ({order_accuracy})')
     draw_xy_graph(R, color='blue', label=f'R ({order_accuracy})')
     draw_xy_graph(IR, color='orange', label=f'IR ({order_accuracy})')
-    draw_xy_graph(I, color='green', label=f'I ({order_accuracy})', show=True)
+    draw_xy_graph(I, color='green', label=f'I ({order_accuracy})', show=show)
 
     return T
+
+
+def dop_calculate(r_obj, order_accuracy, Rk_list=[0.2500], colors=['green']):
+    for i, rk in enumerate(Rk_list):
+        Constants.Rk = rk
+
+        I, U, T = wrap_with_time(r_obj, order_accuracy)
+        draw_xy_graph(I, color=colors[i], label=f'I ({rk})')
+
+    draw()
 
 
 def main():
@@ -77,6 +88,14 @@ def main():
         [[t1 + t2 + t4, t1, t2, t4]],
         ['Всего', '1 порядок', '2 порядок', '4 порядок']
     )
+
+    # Посчитать I при больших значениях R
+    # dop_calculate(
+    #     r_obj,
+    #     1,
+    #     [0.2500, 0.5, 1, 10, 50, 100, 150],
+    #     ['y', 'orange', 'red', 'magenta', '#9400d3', '#3333ff', '#66b0ff']
+    # )
 
 
 if __name__ == '__main__':
