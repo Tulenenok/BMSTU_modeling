@@ -36,6 +36,10 @@ def dIdt(t, U, I):
     return (U - (Constants.Rk + Rp(I)) * I) / Constants.Lk
 
 
+def dIdt_if_0(t, U, I):
+    return (U) / Constants.Lk
+
+
 def dUdt(t, U, I):
     return -I / Constants.Ck
 
@@ -61,7 +65,7 @@ def wrap_one_calculate(r_obj, order_accuracy):
     draw_xy_graph(U, color='red', label=f'U ({order_accuracy})')
     draw_xy_graph(R, color='blue', label=f'R ({order_accuracy})')
     draw_xy_graph(IR, color='orange', label=f'IR ({order_accuracy})')
-    draw_xy_graph(I, color='green', label=f'I ({order_accuracy})', show=show)
+    draw_xy_graph(I, color='green', label=f'I ({order_accuracy})', show=True)
 
     return T
 
@@ -88,6 +92,10 @@ def main():
         [[t1 + t2 + t4, t1, t2, t4]],
         ['Всего', '1 порядок', '2 порядок', '4 порядок']
     )
+
+    # Посторить график I(t), если Rk + Rp = 0
+    # r_obj = RungeKutta(dIdt_if_0, dUdt, 0, 0.5, 1400, 700e-6, 0.5e-6)
+    # t4 = wrap_one_calculate(r_obj, 4)
 
     # Посчитать I при больших значениях R
     # dop_calculate(
