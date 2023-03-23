@@ -10,15 +10,14 @@ from tools import (
     print_result_like_table
 )
 
+# Находим функции, используя интерполяцию на данные в тз таблицы
+T0 = Interpolation(Constants.I, Constants.T0)
+m = Interpolation(Constants.I, Constants.m)
+sigma = Interpolation(Constants.T, Constants.Sigma)
+
 
 def integrand_expression(x, I):
     """ Используется в функции Rp"""
-
-    # Находим функции, используя интерполяцию на данные в тз таблицы
-    T0 = Interpolation(Constants.I, Constants.T0)
-    m = Interpolation(Constants.I, Constants.m)
-    sigma = Interpolation(Constants.T, Constants.Sigma)
-
     Tw = Constants.Tw
     return x * sigma(T0(I) + (Tw - T0(I)) * x ** m(I))
 
@@ -49,21 +48,29 @@ def wrap_with_time(r_obj, order_accuracy):
     return i_res, u_res, end - start
 
 
+def wrap_one_calculate(r_obj, order_accuracy):
+    I, U, T = wrap_with_time(r_obj, order_accuracy)
+
+    R = [(i[0], Rp(math.fabs(i[1]))) for i in I]
+    IR = [(i[0], R[ind][1] * i[1]) for ind, i in enumerate(I)]
+
+    # _T0 = [(i[0], T0(math.fabs(i[1]))) for i in I]
+    # draw_xy_graph(_T0, color='orange', label=f'T0 ({order_accuracy})')
+
+    draw_xy_graph(U, color='red', label=f'U ({order_accuracy})')
+    draw_xy_graph(R, color='blue', label=f'R ({order_accuracy})')
+    draw_xy_graph(IR, color='orange', label=f'IR ({order_accuracy})')
+    draw_xy_graph(I, color='green', label=f'I ({order_accuracy})', show=True)
+
+    return T
+
+
 def main():
     r_obj = RungeKutta(dIdt, dUdt, 0, 0.5, 1400, 700e-6, 0.5e-6)
 
-    i1, u1, t1 = wrap_with_time(r_obj, 1)
-    i2, u2, t2 = wrap_with_time(r_obj, 2)
-    i4, u4, t4 = wrap_with_time(r_obj, 4)
-
-    draw_xy_graph(u1, color='red', label='U (1)')
-    draw_xy_graph(i1, color='green', label='I (1)', show=True)
-
-    draw_xy_graph(u2, color='orange', label='U (2)')
-    draw_xy_graph(i2, color='blue', label='I (2)', show=True)
-
-    draw_xy_graph(u4, color='magenta', label='U (4)')
-    draw_xy_graph(i4, color='purple', label='I (4)', show=True)
+    t1 = wrap_one_calculate(r_obj, 1)
+    t2 = wrap_one_calculate(r_obj, 2)
+    t4 = wrap_one_calculate(r_obj, 4)
 
     print_result_like_table(
         '\nВРЕМЯ ВЫПОЛНЕНИЯ',
