@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T19:45:03.454Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.0.2317 Yowser/2.5 Safari/537.36" etag="NdFEnZfKO9SC_v_kAo0d" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-03T19:46:16.911Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.0.2317 Yowser/2.5 Safari/537.36" etag="np36AA6huwjMfX7DHEw9" version="21.2.1" type="github" pages="3">
   <diagram id="IXbQ9OrFsUy66UcV-YO6" name="Страница 2">
     <mxGraphModel dx="1294" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -125,7 +125,7 @@
             <mxPoint x="398" y="401" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-1" value="&lt;b&gt;r &lt;/b&gt;- расстояние от центра трубы до &lt;br&gt;некоторой точки на стенке" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-1" value="&lt;b&gt;r &lt;/b&gt;- расстояние от центра трубы до &lt;br&gt;некоторой точки на стенке" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="470" y="545" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zaONMS_O3ozOx160s-He-2" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="1">
@@ -134,7 +134,7 @@
             <mxPoint x="549" y="312" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-3" value="&lt;b&gt;T&amp;nbsp;&lt;/b&gt;- температура в некоторой точке" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-3" value="&lt;b&gt;T&amp;nbsp;&lt;/b&gt;- температура в некоторой точке" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="520" y="120" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zaONMS_O3ozOx160s-He-4" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="1">
@@ -143,10 +143,10 @@
             <mxPoint x="448.6539473684211" y="337" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-5" value="&lt;b&gt;λ&amp;nbsp;&lt;/b&gt;- некоторая функция, которую мы найдем с помощью &lt;br&gt;интерполяции по таблице из условия" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-5" value="&lt;b&gt;λ&amp;nbsp;&lt;/b&gt;- некоторая функция, которую мы найдем с помощью &lt;br&gt;интерполяции по таблице из условия" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="190" y="190" width="340" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-6" value="&lt;b&gt;k&amp;nbsp;&lt;/b&gt;- некоторая функция, которую мы найдем с помощью &lt;br&gt;интерполяции по таблице из условия" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-6" value="&lt;b&gt;k&amp;nbsp;&lt;/b&gt;- некоторая функция, которую мы найдем с помощью &lt;br&gt;интерполяции по таблице из условия" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="660" y="480" width="340" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zaONMS_O3ozOx160s-He-7" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="1">
@@ -161,10 +161,10 @@
             <mxPoint x="760" y="342" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-9" value="&lt;b&gt;σ&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-9" value="&lt;b&gt;σ&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="820" y="230" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-10" value="&lt;b&gt;n&lt;sub&gt;p&lt;/sub&gt;&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-10" value="&lt;b&gt;n&lt;sub&gt;p&lt;/sub&gt;&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="735" y="180" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zaONMS_O3ozOx160s-He-11" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="1">
@@ -173,7 +173,7 @@
             <mxPoint x="719" y="334" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zaONMS_O3ozOx160s-He-12" value="&lt;b&gt;T&lt;sub&gt;0&lt;/sub&gt;&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="zaONMS_O3ozOx160s-He-12" value="&lt;b&gt;T&lt;sub&gt;0&lt;/sub&gt;&amp;nbsp;&lt;/b&gt;- константа, дана по условию" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#CCE5FF;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="955" y="400" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zaONMS_O3ozOx160s-He-13" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="1">
