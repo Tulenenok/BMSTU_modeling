@@ -1,9 +1,116 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T18:54:43.572Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.0.2317 Yowser/2.5 Safari/537.36" version="21.2.1" etag="eIqhbS-hORnBZtQcM2-C" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-03T19:20:48.217Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.0.2317 Yowser/2.5 Safari/537.36" etag="AUsSyetl6j35LkVSX6O5" version="21.2.1" type="github" pages="2">
   <diagram name="Страница 1" id="shf90UXJ1jG7tRpSuT_I">
-    <mxGraphModel>
+    <mxGraphModel dx="2265" dy="1265" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-1" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=90;flipH=0;flipV=0;" vertex="1" parent="1">
+          <mxGeometry x="405" y="65" width="60" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-2" value="" style="endArrow=none;html=1;rounded=0;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="199.5" as="sourcePoint" />
+            <mxPoint x="300" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-3" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="556" y="200" as="sourcePoint" />
+            <mxPoint x="640" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qZdFuMKV_-Ma9HJdiaUK-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="220" as="sourcePoint" />
+            <mxPoint x="560" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-6" value="&lt;span style=&quot;background-color: rgb(255, 230, 204);&quot;&gt;горячий воздух&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="580" y="165" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-7" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="75" as="sourcePoint" />
+            <mxPoint x="390" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-8" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429.55" y="75" as="sourcePoint" />
+            <mxPoint x="429.55" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-9" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="469" y="75" as="sourcePoint" />
+            <mxPoint x="469" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-10" value="&lt;span style=&quot;background-color: rgb(204, 229, 255);&quot;&gt;холодный воздух&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="371" y="41" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="290" as="sourcePoint" />
+            <mxPoint x="360" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-12" value="&lt;b&gt;?&lt;br&gt;&lt;/b&gt;нужно найти &lt;br&gt;температуру на стенке" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="160" y="296" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qZdFuMKV_-Ma9HJdiaUK-19" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="NaN" y="NaN" width="NaN" height="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="IXbQ9OrFsUy66UcV-YO6" name="Страница 2">
+    <mxGraphModel dx="1294" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Qk72vJzxYcWjtlstPFbI-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE6CC;strokeColor=default;gradientColor=#CCE5FF;gradientDirection=radial;" vertex="1" parent="1">
+          <mxGeometry x="349.5" y="455.5" width="464.5" height="464.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Qk72vJzxYcWjtlstPFbI-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="525.22" y="631.22" width="113.06" height="113.06" as="geometry" />
+        </mxCell>
+        <mxCell id="Qk72vJzxYcWjtlstPFbI-7" value="" style="endArrow=open;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" target="Qk72vJzxYcWjtlstPFbI-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="582" y="692" as="sourcePoint" />
+            <mxPoint x="632" y="642" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qk72vJzxYcWjtlstPFbI-8" value="" style="endArrow=open;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" target="Qk72vJzxYcWjtlstPFbI-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="583" y="692" as="sourcePoint" />
+            <mxPoint x="408.5244500694241" y="513.5244500694241" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Jrn0uPe58-6UDWGgRBzR-1" value="r&lt;sub&gt;0&lt;/sub&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="596" y="663.75" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c-VHkq_xsncwukmDHwlD-1" value="R" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="463" y="592.22" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CpPLl1II0z7BcPS39NXY-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="640.28" y="822" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="CpPLl1II0z7BcPS39NXY-2" value="" style="endArrow=open;html=1;rounded=0;endFill=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="CpPLl1II0z7BcPS39NXY-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="582" y="691" as="sourcePoint" />
+            <mxPoint x="645" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CpPLl1II0z7BcPS39NXY-3" value="r" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="611.28" y="749.28" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pJtF4Yz0widAitxr6bk7-1" value="&lt;b&gt;&lt;br&gt;Стенка трубы в разрезе&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 10px;&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;r&lt;/b&gt;&amp;nbsp; - расстояние от центра трубы до любой точки&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 10px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;внутри стенки&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;r&lt;sub&gt;0&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;&amp;nbsp; - расстояние от центра трубы до начала стенки&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;R&lt;/b&gt;&amp;nbsp;- расстояние от центра трубы до конца стенки&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pJtF4Yz0widAitxr6bk7-2" value="Вводится безразмерная величина &lt;br&gt;&lt;b&gt;z = r / R&lt;/b&gt;.&amp;nbsp;&lt;br&gt;Показывает, насколько мы близки к R. &lt;br&gt;Очевидно, что чем больше z, тем &lt;br&gt;меньше должна быть температура &lt;br&gt;на стенке (холодно)." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#36393d;fillColor=#eeeeee;" vertex="1" parent="1">
+          <mxGeometry x="60" y="592.22" width="250" height="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
