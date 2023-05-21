@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Model mod = new Model(3, 1.4, 0.35, 0.5, 1, 300, 5.668e-12, 100.0, 0.05, 2e-3);
+        Model mod = new Model(1e-6, 1.4, 0.35, 0.5, 1, 300, 5.668e-12, 100.0, 0.05, 2e-3);
         int n = ((int)((mod.zN - mod.z0) / mod.h / mod.R)) + 1;
         double[] z = new double[n];
         double[] y = new double[n];
@@ -22,7 +22,7 @@ public class Main {
             y[i] = mod.T0;
         }
 
-        for (double i = 0; i < 200; i += mod.tau)
+        for (double i = 0; i < 1e-3; i += mod.tau)
         {
             double[] tmp = new double[n];
             System.arraycopy(y, 0, tmp, 0, y.length);           // y.CopyTo(tmp, 0);

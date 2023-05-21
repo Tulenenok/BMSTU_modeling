@@ -56,14 +56,14 @@ public class Model {
 
     public double F0(double t)
     {
-        if (t < 100) {
-            return 100;
-        }
-        else {
-            return 0;
-        }
+//        if (t < 100) {
+//            return 100;
+//        }
+//        else {
+//            return 0;
+//        }
 
-//        return Fmax / tmax * t * Math.exp(-(t / tmax - 1));
+        return Fmax / tmax * t * Math.exp(-(t / tmax - 1));
     }
 
     private double P(double T)
