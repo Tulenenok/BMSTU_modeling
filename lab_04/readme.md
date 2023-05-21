@@ -21,8 +21,8 @@ for (double i = 0; i < 200; i += mod.tau)
 
 Gолучили
 
-<img src="img/img_01.png" width="400px">
+<img src="img/img_01.png" width=700px>
 
-<img src="img/img_02.png" width="400px">
+<img src="img/img_02.png" width=700px>
 
-<img src="img/img_03.png" width="400px">
+<img src="img/img_03.png" width=700px>
